@@ -2,6 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:safety_app/add_address.dart';
+import 'package:safety_app/set_traveltime.dart';
 import 'register.dart';
 import 'otpverify.dart';
 import 'addcontacts.dart';
@@ -12,6 +14,8 @@ void main() => runApp(MaterialApp(
   routes: {
     '/': (context) => Home(),
     '/addcontacts': (context) => AddContacts(),
+    '/setreachtime': (context) => SetTravelTime(),
+    '/addaddress': (context) => AddAddress(),
   },
 ));
 

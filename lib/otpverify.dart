@@ -134,7 +134,7 @@ class _VerificationScreenState extends State<VerificationScreen> {
                   label: Text(
                       "Verify",
                     style: GoogleFonts.urbanist(
-                      fontSize: 16.0,
+                      fontSize: 19.0,
                       color: Colors.black,
                       fontWeight: FontWeight.w500,
                     ),

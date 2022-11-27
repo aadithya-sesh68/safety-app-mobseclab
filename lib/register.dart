@@ -19,7 +19,7 @@ class _HomeState extends State<Home> {
       resizeToAvoidBottomInset : true,
       backgroundColor: Colors.grey[100],
       appBar: AppBar(
-        title: Text('MySafeLoc - Safety Application!'),
+        title: Text('MySafeLoc - Safety Application'),
         centerTitle: true,
         backgroundColor: Colors.cyan[700],
       ),
@@ -88,7 +88,14 @@ class _HomeState extends State<Home> {
                           ));
                     },
                     icon: Icon(Icons.phone),
-                    label: Text("Register"),
+                    label: Text(
+                        "Register",
+                      style: GoogleFonts.urbanist(
+                        fontSize: 20.0,
+                        color: Colors.black,
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
                     style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.white,
                         foregroundColor: Colors.black,

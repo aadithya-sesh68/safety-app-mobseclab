@@ -28,7 +28,7 @@ class _AddContactsState extends State<AddContacts> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Padding(
-                  padding: EdgeInsets.all(5),
+                  padding: EdgeInsets.all(20),
                   child: Text(
                     "Add Emergency Contacts",
                     style: GoogleFonts.urbanist(
@@ -39,17 +39,43 @@ class _AddContactsState extends State<AddContacts> {
                     textAlign: TextAlign.center,
                   ),
                 ),
+                SizedBox(
+                  width: 300,
+                  child: TextField(
+                    decoration: InputDecoration(
+                        hintText: 'Enter 10-digit mobile number',
+                        contentPadding: const EdgeInsets.all(15),
+                        border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(30)
+                        )),
+                    keyboardType: TextInputType.number,
+                    inputFormatters: [
+                      FilteringTextInputFormatter.digitsOnly
+                    ],
+                    //onChanged: (val) => print(val),
+                  )
+                ),
+                ElevatedButton(
+                  onPressed: () {},
+                  child: Icon(Icons.add, color: Colors.black, size: 30),
+                  style: ElevatedButton.styleFrom(
+                    shape: CircleBorder(),
+                    padding: EdgeInsets.all(10),
+                    backgroundColor: Colors.white, // <-- Button color
+                    foregroundColor: Colors.teal, // <-- Splash color
+                  ),
+                ),
                 SizedBox(height: 10),
                 Center(
                   child: ElevatedButton.icon(
                     onPressed: () {
-                      print("Contact added");
+                      Navigator.pushNamed(context, '/setreachtime');
                     },
-                    icon: Icon(Icons.message_rounded),
+                    icon: Icon(Icons.navigate_next),
                     label: Text(
-                      "Add Contact",
+                      "Proceed",
                       style: GoogleFonts.urbanist(
-                        fontSize: 16.0,
+                        fontSize: 19.0,
                         color: Colors.black,
                         fontWeight: FontWeight.w500,
                       ),
